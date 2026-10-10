@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1530">
+  <title>Small Business Cybersecurity Checklist | Triple M Tech Solutions</title>
+  <style>
+    :root {
+      --navy: #0b1530; --navy2: #132448; --blue: #2f80ff;
+      --pale: #edf4ff; --silver: #c7d0df; --ink: #172033;
+      --muted: #667085; --line: #dce3ee; --white: #fff;
+      --good: #137547; --warn: #9a5b00;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f3f6fb; color: var(--ink); font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    header { background: linear-gradient(135deg, var(--navy), #17366e); color: white; padding: 28px 18px 34px; }
+    .wrap { width: min(100% - 28px, 920px); margin: 0 auto; }
+    .brand { display:flex; gap:12px; align-items:center; margin-bottom:22px; }
+    .logo { width:48px; height:48px; display:grid; place-items:center; border:1px solid #5b9cff; border-radius:14px; background:#142c56; font-size:24px; font-weight:800; color:#80b6ff; }
+    .brand strong { display:block; letter-spacing:.04em; font-size:15px; }
+    .brand small { color:#cbd9f2; }
+    h1 { font-size:clamp(27px, 5vw, 42px); line-height:1.1; margin:0 0 12px; max-width:700px; }
+    header p { margin:0; color:#d8e4f8; max-width:680px; }
+    .tag { display:inline-block; margin-top:18px; border:1px solid #5d8bc9; padding:5px 10px; border-radius:99px; font-size:12px; letter-spacing:.04em; }
+    main { padding:22px 0 42px; }
+    .score-card { display:grid; grid-template-columns:1fr auto; gap:18px; align-items:center; background:white; border:1px solid var(--line); border-radius:18px; padding:20px; box-shadow:0 8px 24px #1424480a; margin-bottom:18px; }
+    .score-card h2 { font-size:18px; margin:0 0 4px; }
+    .score-card p { margin:0; color:var(--muted); font-size:14px; }
+    .score { font-size:34px; font-weight:800; color:var(--blue); letter-spacing:-.04em; }
+    .track { height:9px; background:#e6ebf3; border-radius:99px; overflow:hidden; margin-top:14px; }
+    .fill { width:0%; height:100%; background:linear-gradient(90deg, #2f80ff, #70b7ff); transition:width .2s ease; }
+    .section { background:white; border:1px solid var(--line); border-radius:16px; margin:14px 0; overflow:hidden; }
+    .section-head { display:flex; gap:12px; align-items:center; padding:17px 18px; background:#fbfcff; border-bottom:1px solid var(--line); }
+    .number { flex:0 0 38px; height:38px; display:grid; place-items:center; border-radius:11px; background:var(--pale); color:var(--blue); font-weight:800; }
+    .section-head h2 { margin:0; font-size:17px; }
+    .section-head p { margin:2px 0 0; color:var(--muted); font-size:13px; }
+    .items { padding:5px 18px 10px; }
+    label.item { display:flex; gap:12px; align-items:flex-start; padding:13px 0; border-bottom:1px solid #edf0f5; cursor:pointer; }
+    label.item:last-child { border-bottom:0; }
+    input[type=checkbox] { width:20px; height:20px; flex:0 0 20px; margin:2px 0 0; accent-color:var(--blue); cursor:pointer; }
+    .item-text { flex:1; }
+    .item-text strong { display:block; font-size:14px; font-weight:650; }
+    .item-text small { display:block; color:var(--muted); font-size:12px; margin-top:3px; }
+    .item.done .item-text strong { color:#667085; text-decoration:line-through; }
+    .section-count { margin-left:auto; color:var(--muted); font-size:12px; white-space:nowrap; }
+    .actions { display:flex; gap:10px; flex-wrap:wrap; margin:20px 0; }
+    button { border:0; border-radius:11px; padding:12px 16px; font-weight:700; font-size:14px; cursor:pointer; }
+    .primary { background:var(--blue); color:white; }
+    .secondary { background:white; border:1px solid var(--line); color:var(--navy); }
+    button:focus-visible, input:focus-visible { outline:3px solid #90bcff; outline-offset:3px; }
+    .report { display:none; background:white; border:1px solid var(--line); border-radius:16px; padding:20px; margin:18px 0; }
+    .report.show { display:block; }
+    .report h2 { margin:0 0 6px; }
+    .report p { margin:6px 0 12px; }
+    .report ul { padding-left:20px; }
+    .notice { background:#fff8e8; border:1px solid #f1d9a6; color:#66450c; border-radius:12px; padding:13px 15px; font-size:13px; margin-top:18px; }
+    footer { text-align:center; padding:24px 10px 34px; color:var(--muted); font-size:12px; }
+    footer strong { color:var(--navy); }
+    @media (max-width:560px) {
+      .score-card { grid-template-columns:1fr; gap:6px; }
+      .score { font-size:30px; }
+      .section-head { padding:14px; }
+      .items { padding-left:14px; padding-right:14px; }
+      .section-count { display:none; }
+      .actions button { flex:1 1 100%; }
+    }
+    @media print {
+      body { background:white; } header { padding:16px; print-color-adjust:exact; -webkit-print-color-adjust:exact; }
+      .wrap { width:100%; } .actions { display:none; } .section { break-inside:avoid; box-shadow:none; }
+      .report { display:block; } footer { padding-bottom:0; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">M³</div>
+      <div><strong>TRIPLE M TECH SOLUTIONS</strong><small>Cybersecurity • IT Solutions</small></div>
+    </div>
+    <h1>Small Business Cybersecurity Checklist</h1>
+    <p>Simple, practical steps to help protect your business accounts, devices, information and customers.</p>
+    <span class="tag">FREE SELF-CHECK • BEGINNER FRIENDLY</span>
+  </div>
+</header>
+<main class="wrap">
+  <section class="score-card" aria-live="polite">
+    <div>
+      <h2>Your security readiness progress</h2>
+      <p id="scoreMessage">Tick the actions your business has completed. Start with the highest-risk gaps.</p>
+      <div class="track" role="progressbar" aria-label="Checklist completion" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress"><div class="fill" id="progressFill"></div></div>
+    </div>
+    <div class="score" id="score">0%</div>
+  </section>
+
+  <div id="checklist"></div>
+
+  <div class="actions">
+    <button class="primary" id="makeReport">Create my action plan</button>
+    <button class="secondary" id="printReport">Print / Save as PDF</button>
+    <button class="secondary" id="reset">Reset checklist</button>
+  </div>
+
+  <section class="report" id="report" aria-live="polite">
+    <h2>Your cybersecurity action plan</h2>
+    <p id="reportIntro"></p>
+    <h3>Recommended next steps</h3>
+    <ul id="recommendations"></ul>
+    <p><strong>Suggested review:</strong> revisit this checklist monthly and after a major change, security incident, or new employee joining.</p>
+  </section>
+
+  <div class="notice"><strong>Important:</strong> This checklist is an educational self-assessment, not a formal security audit or a guarantee of safety. A completed checkbox reflects your own answer and does not independently verify that a control is working.</div>
+</main>
+<footer>
+  <strong>Triple M Tech Solutions</strong><br>
+  Making technology simple, useful & secure.<br>
+  Checklist progress stays in this page while it is open. This starter version does not upload or store your answers on a server.
+</footer>
+
+<script>
+const sections = [
+  {
+    title: "Strong passwords & multifactor authentication",
+    desc: "Protect the accounts that control your business.",
+    items: [
+      ["Use unique, long passwords", "Avoid reusing passwords across email, banking and social media."],
+      ["Turn on multifactor authentication (MFA)", "Prioritise email, financial services, social media and cloud storage."],
+      ["Use a reputable password manager", "Avoid storing passwords in public notes or sharing them in chats."],
+      ["Review account access", "Remove access for former staff and change credentials after suspected compromise."]
+    ]
+  },
+  {
+    title: "Secure backups & recovery",
+    desc: "Make sure important information can be restored.",
+    items: [
+      ["Back up important business files regularly", "Include customer records, invoices, accounts and essential documents."],
+      ["Keep a separate protected backup", "Keep at least one backup isolated from everyday accounts or devices."],
+      ["Protect backup access", "Use strong authentication and encryption where available."],
+      ["Test restoring files", "Practice recovery and write down who to contact and what to restore first."]
+    ]
+  },
+  {
+    title: "Phishing awareness & email security",
+    desc: "Pause before clicking, paying or sharing information.",
+    items: [
+      ["Check unexpected links and attachments", "Inspect the sender and confirm unusual requests before acting."],
+      ["Verify urgent payment requests separately", "Call a known number or use another trusted channel."],
+      ["Enable spam and phishing protection", "Use the security features provided by your email service."],
+      ["Protect verification and recovery codes", "Never share passwords or one-time codes in response to unsolicited messages."],
+      ["Know how to report a suspicious message", "Tell the appropriate person and act quickly if you clicked or entered details."]
+    ]
+  },
+  {
+    title: "Software updates & device protection",
+    desc: "Keep the devices and networks used by your business safer.",
+    items: [
+      ["Enable automatic security updates", "Update operating systems, browsers and supported applications."],
+      ["Use built-in or reputable security protection", "Keep protections enabled and investigate warnings."],
+      ["Lock devices when not in use", "Use a PIN, password or biometric lock and a short screen-lock timeout."],
+      ["Protect sensitive files and devices", "Use device encryption where supported and restrict access to business data."],
+      ["Secure business Wi-Fi and router settings", "Use WPA2-AES or WPA3, a strong Wi-Fi password and a changed router admin password."],
+      ["Remove unused apps and accounts", "Reduce unnecessary software and permissions."]
+    ]
+  },
+  {
+    title: "Safe use of AI tools & automation",
+    desc: "Use AI productively without exposing sensitive information.",
+    items: [
+      ["Keep confidential data out of unapproved AI tools", "Do not paste passwords, payment details or identifiable customer records into them."],
+      ["Review AI-generated output", "Check facts, calculations, tone and recommendations before using or publishing."],
+      ["Check app permissions before connecting AI", "Review access to email, files, calendars and business accounts."],
+      ["Secure AI accounts", "Use MFA when available and separate work from personal access where practical."],
+      ["Review automation before it runs", "Understand what it can send, delete, change or share."],
+      ["Require human approval for high-impact actions", "Review sensitive decisions, payments and external messages before they go out."]
+    ]
+  }
+];
+
+const checklist = document.getElementById("checklist");
+const keyFor = (s, i) => `${s}-${i}`;
+sections.forEach((section, si) => {
+  const article = document.createElement("section");
+  article.className = "section";
+  article.innerHTML = `<div class="section-head"><div class="number">${String(si+1).padStart(2,"0")}</div><div><h2>${section.title}</h2><p>${section.desc}</p></div><div class="section-count" id="count-${si}">0/${section.items.length}</div></div>`;
+  const items = document.createElement("div");
+  items.className = "items";
+  section.items.forEach((entry, ii) => {
+    const label = document.createElement("label");
+    label.className = "item";
+    const cb = document.createElement("input");
+    cb.type = "checkbox";
+    cb.dataset.section = si;
+    cb.dataset.item = ii;
+    cb.setAttribute("aria-label", entry[0]);
+    const text = document.createElement("span");
+    text.className = "item-text";
+    const strong = document.createElement("strong"); strong.textContent = entry[0];
+    const small = document.createElement("small"); small.textContent = entry[1];
+    text.append(strong, small);
+    label.append(cb, text);
+    cb.addEventListener("change", () => { label.classList.toggle("done", cb.checked); updateProgress(); });
+    items.append(label);
+  });
+  article.append(items);
+  checklist.append(article);
+});
+
+function allChecks() { return [...document.querySelectorAll('#checklist input[type="checkbox"]')]; }
+function updateProgress() {
+  const checks = allChecks();
+  const completed = checks.filter(c => c.checked).length;
+  const pct = Math.round(completed / checks.length * 100);
+  document.getElementById("score").textContent = pct + "%";
+  document.getElementById("progressFill").style.width = pct + "%";
+  document.getElementById("progress").setAttribute("aria-valuenow", pct);
+  document.getElementById("scoreMessage").textContent =
+    completed === checks.length ? "All checklist items marked complete. Consider testing that each control works." :
+    `${completed} of ${checks.length} actions marked complete. Focus first on protecting email, enabling MFA and ensuring backups can be restored.`;
+  sections.forEach((s, si) => {
+    const sectionChecks = checks.filter(c => Number(c.dataset.section) === si);
+    document.getElementById(`count-${si}`).textContent = `${sectionChecks.filter(c => c.checked).length}/${sectionChecks.length}`;
+  });
+}
+document.getElementById("makeReport").addEventListener("click", () => {
+  const checks = allChecks();
+  const completed = checks.filter(c => c.checked).length;
+  const pct = Math.round(completed / checks.length * 100);
+  const missing = [];
+  sections.forEach((s, si) => {
+    const unchecked = checks.filter(c => Number(c.dataset.section) === si && !c.checked);
+    if (unchecked.length) missing.push({title:s.title, items:unchecked.map(c => s.items[Number(c.dataset.item)][0])});
+  });
+  document.getElementById("reportIntro").textContent = `You marked ${completed} of ${checks.length} actions complete (${pct}%). This is a self-reported progress measure, not a verified security rating.`;
+  const list = document.getElementById("recommendations");
+  list.replaceChildren();
+  if (!missing.length) {
+    const li = document.createElement("li"); li.textContent = "No unchecked items. Verify that each control is working and keep reviewing regularly."; list.append(li);
+  } else {
+    missing.forEach(group => {
+      const li = document.createElement("li");
+      li.innerHTML = `<strong></strong><ul></ul>`;
+      li.querySelector("strong").textContent = group.title;
+      group.items.forEach(item => { const sub = document.createElement("li"); sub.textContent = item; li.querySelector("ul").append(sub); });
+      list.append(li);
+    });
+  }
+  const report = document.getElementById("report");
+  report.classList.add("show");
+  report.scrollIntoView({behavior:"smooth", block:"start"});
+});
+document.getElementById("printReport").addEventListener("click", () => {
+  document.getElementById("report").classList.add("show");
+  window.print();
+});
+document.getElementById("reset").addEventListener("click", () => {
+  if (!confirm("Reset all checklist answers?")) return;
+  allChecks().forEach(c => { c.checked = false; c.closest("label").classList.remove("done"); });
+  document.getElementById("report").classList.remove("show");
+  updateProgress();
+  window.scrollTo({top:0, behavior:"smooth"});
+});
+updateProgress();
+</script>
+</body>
+</html>
